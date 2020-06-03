@@ -1,2 +1,2 @@
-# 20203110 HaEun Yun
+# 20203110     HaEun Yun
 # Kookmin Univ. SW
