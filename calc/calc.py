@@ -7,9 +7,13 @@ def application(environ, start_response):
     second_num = d.get('second_num', [''])[0]
     sum, mul = 0, 0
     if '' not in [first_num, second_num]:
-        first_num, second_num = int(first_num), int(second_num)
-        sum = str( first_num + second_num)
-        mul = str(first_num * second_num)
+        try:
+            first_num, second_num = int(first_num), int(second_num)
+            sum = str( first_num + second_num)
+            mul = str(first_num * second_num)
+        except ValueError:
+            sum = "not integer"
+            mul = "not integer"
     else:
         sum = "none"
         mul = "none"
