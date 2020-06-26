@@ -8,8 +8,8 @@ def application(environ, start_response):
     sum, mul = 0, 0
     if '' not in [first_num, second_num]:
         first_num, second_num = int(first_num), int(second_num)
-        sum = first_num + second_num
-        mul = first_num * second_num
+        sum = str( first_num + second_num)
+        mul = str(first_num * second_num)
     else:
         sum = "none"
         mul = "none"
